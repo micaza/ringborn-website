@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ringborn Ascension</title>
+  <meta name="description" content="Ringborn Ascension — a fast-paced arcade game by PixelDog Games. Collect rings, evolve into a Spartan, and survive endless waves of spikes and homing missiles.">
+  <meta property="og:title" content="Ringborn Ascension">
+  <meta property="og:description" content="Collect rings, evolve into a Spartan, and survive endless waves of spikes and homing missiles.">
+  <meta property="og:image" content="images/title.png">
+  <link rel="icon" type="image/png" href="images/hero.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="images/title.png" alt="Ringborn Ascension" class="title-img">
+      <p class="tagline">Collect rings. Evolve. Survive.</p>
+
+      <div class="store-badges">
+        <!-- TODO: replace the # below with your actual App Store and Google Play links -->
+        <a href="#" class="badge ios has-tooltip" aria-label="Download on the App Store — under development" data-tooltip="Under Development">
+          <span class="badge-prefix">Download on the</span>
+          <span class="badge-name">App Store</span>
+        </a>
+        <span class="badge android coming-soon" aria-label="Google Play — coming soon">
+          <span class="badge-prefix">Google Play</span>
+          <span class="badge-name">Coming Soon</span>
+        </span>
+      </div>
+    </div>
+    <img src="images/spike.png" alt="" class="hero-spike" aria-hidden="true">
+    <img src="images/hero.png" alt="" class="hero-sprite" aria-hidden="true">
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <h2>The Game</h2>
+      <p>
+        Drag to dodge. Collect rings. Grab the gem to evolve into a battle-hardened
+        Spartan with a powerful laser. Pick up power-ups, deflect spikes with your shield,
+        and survive the endless ascent through stages of increasing danger.
+      </p>
+      <p>
+        Beyond stage 30 the enemies start firing homing missiles. By stage 55, you'll face both —
+        the standard volleys <em>and</em> the missiles, at once. Good luck.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature-icon">🎯</div>
+          <h3>Easy to Learn</h3>
+          <p>One-finger touch control. Hold and drag to move and fire. Lift to stop shooting.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚔️</div>
+          <h3>Spartan Evolution</h3>
+          <p>Collect the gem, transform, and unleash powerful lasers on the spikes.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💎</div>
+          <h3>Six Power-Ups</h3>
+          <p>Blue laser, fast laser, ball laser, shield, armor, and health.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🚀</div>
+          <h3>Endless Stages</h3>
+          <p>Every stage adds more rings, more spikes, and at higher stages — homing missiles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="powerups">
+    <div class="container">
+      <h2>Power-Ups</h2>
+      <div class="powerup-grid">
+        <div class="powerup">
+          <span class="powerup-dot" style="background:#ffffff"></span>
+          <div>
+            <h4>Health</h4>
+            <p>Restores your full health bar.</p>
+          </div>
+        </div>
+        <div class="powerup">
+          <span class="powerup-dot" style="background:#2659ff"></span>
+          <div>
+            <h4>Blue Laser</h4>
+            <p>Triples your laser damage — punch through spikes in fewer shots.</p>
+          </div>
+        </div>
+        <div class="powerup">
+          <span class="powerup-dot" style="background:#ff66ff"></span>
+          <div>
+            <h4>Fast Laser</h4>
+            <p>Quadruples your fire rate. Hold and watch the bullets fly.</p>
+          </div>
+        </div>
+        <div class="powerup">
+          <span class="powerup-dot" style="background:#ff760d"></span>
+          <div>
+            <h4>Ball Laser</h4>
+            <p>Fires a glowing orb that explodes on impact, launching eight lasers in every direction.</p>
+          </div>
+        </div>
+        <div class="powerup">
+          <span class="powerup-dot" style="background:#1affd9"></span>
+          <div>
+            <h4>Shield</h4>
+            <p>Five seconds of total invincibility. Run straight through anything.</p>
+          </div>
+        </div>
+        <div class="powerup">
+          <span class="powerup-dot" style="background:#ffd933"></span>
+          <div>
+            <h4>Armor</h4>
+            <p>Halves the damage you take from every hit. The hero glows blue while active.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots">
+    <div class="container">
+      <h2>Screenshots</h2>
+      <div class="shot-grid">
+        <img src="images/Screenshot1.png" alt="Ringborn Ascension gameplay screenshot 1" class="shot">
+        <img src="images/Screenshot2.png" alt="Ringborn Ascension gameplay screenshot 2" class="shot">
+        <img src="images/Screenshot3.jpeg" alt="Ringborn Ascension gameplay screenshot 3" class="shot">
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" alt="">
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <img src="images/studio.png" alt="PixelDog Games" class="studio-logo">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <span class="sep">·</span>
+        <a href="support.html">Support</a>
+      </div>
+      <p class="copy">© <span id="year"></span> PixelDog Games. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightbox
+    (function() {
+      var lb = document.getElementById('lightbox');
+      var lbImg = lb.querySelector('.lightbox-img');
+      var closeBtn = lb.querySelector('.lightbox-close');
+
+      document.querySelectorAll('.shot').forEach(function(img) {
+        img.addEventListener('click', function() {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lb.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function close() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+
+      closeBtn.addEventListener('click', close);
+      lb.addEventListener('click', function(e) {
+        if (e.target === lb) close();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lb.classList.contains('open')) close();
+      });
+    })();
+  </script>
+</body>
+</html>
