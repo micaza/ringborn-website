@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ringborn Ascension</title>
-  <meta name="description" content="Ringborn Ascension — a fast-paced arcade game by PixelDog Games. Collect rings, evolve into a Spartan, and survive endless waves of spikes and homing missiles.">
+  <meta name="description" content="Ringborn Ascension — a fast-paced arcade space shooter by PixelDog Games. Pilot your ship, collect rings, arm your cannon, and survive endless waves of spikes and homing missiles.">
   <meta property="og:title" content="Ringborn Ascension">
-  <meta property="og:description" content="Collect rings, evolve into a Spartan, and survive endless waves of spikes and homing missiles.">
+  <meta property="og:description" content="Pilot your ship, collect rings, arm your cannon, and survive endless waves of spikes and homing missiles.">
   <meta property="og:image" content="images/title.png">
-  <link rel="icon" type="image/png" href="images/hero.png">
+  <link rel="icon" type="image/png" href="images/hero_ship.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
   <header class="hero">
     <div class="hero-inner">
       <img src="images/title.png" alt="Ringborn Ascension" class="title-img">
-      <p class="tagline">Collect rings. Evolve. Survive.</p>
+      <p class="tagline">Pilot. Collect. Evolve. Survive.</p>
 
       <div class="store-badges">
         <!-- TODO: replace the # below with your actual App Store and Google Play links -->
@@ -33,20 +33,23 @@
       </div>
     </div>
     <img src="images/spike.png" alt="" class="hero-spike" aria-hidden="true">
-    <img src="images/hero.png" alt="" class="hero-sprite" aria-hidden="true">
+    <img src="images/ringlady.png" alt="" class="hero-sprite" aria-hidden="true">
+    <img src="images/hero_ship.png" alt="" class="hero-ship-deco" aria-hidden="true">
   </header>
 
   <section class="about">
     <div class="container">
       <h2>The Game</h2>
       <p>
-        Drag to dodge. Collect rings. Grab the rifle to evolve into a battle-hardened
-        Spartan with a powerful laser. Pick up power-ups, deflect spikes with your shield,
-        and survive the endless ascent through stages of increasing danger.
+        Touch and drag to pilot your spaceship. Collect rings, grab the gun to evolve into
+        the armed ship — a battle-ready fighter that fires powerful lasers.
+        Deflect spikes with your nose shield, pick up power-ups, and survive the
+        endless ascent through stages of increasing danger.
       </p>
       <p>
-        Beyond stage 30 the enemies start firing homing missiles. By stage 55, you'll face both —
-        the standard volleys <em>and</em> the missiles, at once. Good luck.
+        The further you go, the harder it gets. Enemies grow in number, move faster, and
+        evolve in ways you won't see coming. Every stage is a new test of reflexes and survival instinct.
+        <em>How far can you make it?</em>
       </p>
     </div>
   </section>
@@ -58,28 +61,43 @@
         <div class="feature">
           <div class="feature-icon">🎯</div>
           <h3>Easy to Learn</h3>
-          <p>One-finger touch control. Hold and drag to move and fire. Lift to stop shooting.</p>
+          <p>One-finger touch control. Drag to fly, lift to stop shooting. Inertia-based flight gives every move a real sense of momentum.</p>
         </div>
         <div class="feature">
-          <div class="feature-icon">⚔️</div>
+          <div class="feature-icon">✈️</div>
+          <h3>It Feels Alive</h3>
+          <p>Your ship doesn't just teleport — it accelerates toward your finger, boosting thruster particles as it picks up speed. Every maneuver feels like you're actually flying.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎵</div>
+          <h3>Sound & Music</h3>
+          <p>An original soundtrack and punchy sound effects bring every clash, laser shot, and close call to life.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">👾</div>
+          <h3>Retro Soul, Modern Feel</h3>
+          <p>Pixel art visuals and chunky effects nod to the classics — but fluid animations, dynamic shaders, and responsive controls make it feel right at home on a modern device.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🛸</div>
           <h3>Spartan Evolution</h3>
-          <p>Collect the gem, transform, and unleash powerful lasers on the spikes.</p>
+          <p>Collect the gun, transform your ship into the armed spaceship fighter, and unleash powerful lasers on incoming spikes.</p>
         </div>
         <div class="feature">
-          <div class="feature-icon">💎</div>
-          <h3>Six Power-Ups</h3>
-          <p>Blue laser, fast laser, ball laser, shield, armor, and health.</p>
+          <div class="feature-icon">🛡️</div>
+          <h3>Nose Shield</h3>
+          <p>Your hero ship's front shield deflects spikes on contact — watch the ripple effect and send them flying back.</p>
         </div>
         <div class="feature">
           <div class="feature-icon">🚀</div>
           <h3>Endless Stages</h3>
-          <p>Every stage adds more rings, more spikes, and at higher stages — homing missiles.</p>
+          <p>Every stage adds more rings, more spikes, and at higher stages — homing missiles that track your every move.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="powerups">
+  <!-- <section class="powerups">
     <div class="container">
       <h2>Power-Ups</h2>
       <div class="powerup-grid">
@@ -122,20 +140,21 @@
           <span class="powerup-dot" style="background:#ffd933"></span>
           <div>
             <h4>Armor</h4>
-            <p>Halves the damage you take from every hit. The hero glows blue while active.</p>
+            <p>Halves the damage you take from every hit. Your ship glows blue while active.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="screenshots">
     <div class="container">
       <h2>Screenshots</h2>
       <div class="shot-grid">
-        <img src="images/Screenshot1.png" alt="Ringborn Ascension gameplay screenshot 1" class="shot">
-        <img src="images/Screenshot2.png" alt="Ringborn Ascension gameplay screenshot 2" class="shot">
-        <img src="images/Screenshot3.jpeg" alt="Ringborn Ascension gameplay screenshot 3" class="shot">
+        <img src="images/Screenshot1.png" alt="Hero ship with shield deflecting spikes" class="shot">
+        <img src="images/Screenshot2.png" alt="Hero ship flying through rings with thruster trail" class="shot">
+        <img src="images/Screenshot3.png" alt="Spartan ship firing blue lasers at spikes" class="shot">
+        <img src="images/Screenshot4.png" alt="Spartan ship firing blue lasers at spikes" class="shot">
       </div>
     </div>
   </section>

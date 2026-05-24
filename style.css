@@ -63,13 +63,33 @@ a:hover { text-decoration: underline; }
 
 .hero-sprite {
   position: absolute;
-  right: -40px;
-  bottom: -20px;
-  width: min(280px, 26vw);
-  opacity: 0.85;
+  right: -20px;
+  bottom: -10px;
+  width: min(320px, 28vw);
+  opacity: 0.92;
   image-rendering: pixelated;
+  image-rendering: crisp-edges;
   pointer-events: none;
   z-index: 1;
+}
+
+.hero-ship-deco {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(260px, 22vw);
+  opacity: 0.70;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  pointer-events: none;
+  z-index: 1;
+  animation: shipFloat 5s ease-in-out infinite;
+}
+
+@keyframes shipFloat {
+  0%, 100% { transform: translateY(-50%) translateY(0px); }
+  50%       { transform: translateY(-50%) translateY(-18px); }
 }
 
 .hero-spike {
@@ -401,7 +421,7 @@ footer {
 /* ===== Mobile ===== */
 @media (max-width: 720px) {
   .hero { min-height: auto; padding: 60px 20px 80px; }
-  .hero-sprite, .hero-spike { display: none; }
+  .hero-sprite, .hero-spike, .hero-ship-deco { display: none; }
   section { padding: 56px 0; }
   .badge { min-width: 0; flex: 1; }
 }
