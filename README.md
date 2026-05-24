@@ -1,6 +1,6 @@
 # Ringborn Ascension — Website
 
-Static marketing site for **Ringborn Ascension** by PixelDog Games. Served via GitHub Pages.
+Static marketing site for **Ringborn Ascension** by PixelDo Games. Served via GitHub Pages.
 
 ## Local preview
 
