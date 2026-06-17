@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ringborn Ascension</title>
+  <meta name="description" content="Ringborn Ascension — a fast-paced arcade space shooter by PixelDo Games. Pilot Rebecca, fight the Spike AI, unlock ships by collecting rings, and survive the boss. Coming July 16, 2026 on Steam, iOS, and Android.">
+  <meta property="og:title" content="Ringborn Ascension">
+  <meta property="og:description" content="Pilot Rebecca. Fight the Spikes. Unlock the fleet. Coming July 16, 2026 on Steam, iOS, and Android.">
+  <meta property="og:image" content="https://pixeldogames.com/ringbornascension/images/title.png">
+  <meta property="og:url" content="https://pixeldogames.com/ringbornascension/">
+  <link rel="icon" type="image/png" href="images/hero_ship.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="space-bg" id="space-bg" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="space-scene" aria-hidden="true">
+      <div class="space-nebula"></div>
+      <img src="images/rebecca-portrait.png" alt="" class="space-rebecca">
+    </div>
+
+    <div class="hero-inner">
+      <img src="images/title.png" alt="Ringborn Ascension" class="title-img">
+      <p class="tagline">Fight the Spikes. Unlock the fleet. Survive.</p>
+      <p class="launch-date">Coming July 16, 2026</p>
+
+      <div class="store-badges">
+        <span class="badge steam coming-soon" aria-label="Steam — coming July 16, 2026">
+          <span class="badge-prefix">Available on</span>
+          <span class="badge-name">Steam</span>
+        </span>
+        <span class="badge ios coming-soon" aria-label="App Store — coming July 16, 2026">
+          <span class="badge-prefix">Download on the</span>
+          <span class="badge-name">App Store</span>
+        </span>
+        <span class="badge android coming-soon" aria-label="Google Play — coming July 16, 2026">
+          <span class="badge-prefix">Get it on</span>
+          <span class="badge-name">Google Play</span>
+        </span>
+      </div>
+    </div>
+    <img src="images/spike.png" alt="" class="hero-spike" aria-hidden="true">
+    <img src="images/hero_ship.png" alt="" class="hero-ship-deco" aria-hidden="true">
+  </header>
+
+  <section class="trailer">
+    <div class="container">
+      <h2>Trailer</h2>
+      <!-- Swap trailer-placeholder for trailer-embed when ready:
+      <div class="trailer-embed">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ringborn Ascension trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      -->
+      <div class="trailer-placeholder" data-youtube-id="">
+        <div class="trailer-play" aria-hidden="true"></div>
+        <p class="trailer-label">Trailer coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <h2>The Game</h2>
+      <p>
+        In deep space, pilot <strong>Rebecca</strong> against the <strong>Spikes</strong> — hostile eye AI
+        bent on taking her down. Collect rings to unlock new ships, each armed with a different weapon
+        to push further into the fight. Grab power-ups mid-run, face the boss, and uncover Rebecca's
+        story as you play.
+      </p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>Highlights</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature-icon">🛸</div>
+          <h3>Unlockable Ships</h3>
+          <p>Collect rings to unlock new fighters — each ship brings a unique weapon to help you advance.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Power-Ups</h3>
+          <p>Pick up upgrades during gameplay to boost your firepower and survive longer runs.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">👁️</div>
+          <h3>Boss Battle</h3>
+          <p>Face a climactic showdown against the Spike threat at the heart of the fight.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎮</div>
+          <h3>Play Your Way</h3>
+          <p>Controller support on mobile and desktop. Steam achievements for completionists.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots">
+    <div class="container">
+      <h2>Screenshots</h2>
+      <div class="shot-grid">
+        <img src="images/Screenshot1.png" alt="Rebecca's ship deflecting spikes with its front shield" class="shot">
+        <img src="images/Screenshot2.png" alt="Rebecca flying through rings with a thruster trail" class="shot">
+        <img src="images/Screenshot3.png" alt="An unlocked ship firing lasers at Spike enemies" class="shot">
+        <img src="images/Screenshot4.png" alt="Combat against waves of Spike eye enemies in space" class="shot">
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" alt="">
+  </div>
+
+  <section class="warnings">
+    <div class="container">
+      <div class="warning-grid">
+        <div class="warning-card">
+          <div class="warning-icon">⚠️</div>
+          <h3>Photosensitivity Warning</h3>
+          <p>This game contains flashing lights and rapidly changing colors that may cause discomfort or seizures in people with photosensitive epilepsy. If you or anyone in your household has a history of epilepsy or seizures, consult a doctor before playing.</p>
+        </div>
+        <div class="warning-card">
+          <div class="warning-icon">🔊</div>
+          <h3>Volume Warning</h3>
+          <p>This game contains loud sound effects and music. Please lower your volume before putting on headphones.</p>
+        </div>
+        <div class="warning-card">
+          <div class="warning-icon">🌐</div>
+          <h3>Platform Availability</h3>
+          <p>Ringborn Ascension launches July 16, 2026 on Steam, iOS, and Android. Steam is a paid release; mobile includes the standard ship for free, with additional ships unlocked through gameplay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <img src="images/studio.png" alt="PixelDo Games" class="studio-logo">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <span class="sep">·</span>
+        <a href="support.html">Support</a>
+      </div>
+      <p class="copy">© <span id="year"></span> PixelDo Games. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Space background: stars + flying asteroids
+    (function() {
+      var bg = document.getElementById('space-bg');
+      if (!bg) return;
+
+      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      for (var i = 0; i < 120; i++) {
+        var star = document.createElement('span');
+        star.className = 'star';
+        star.style.left = (Math.random() * 100) + '%';
+        star.style.top = (Math.random() * 100) + '%';
+        star.style.animationDelay = (Math.random() * 5) + 's';
+        star.style.animationDuration = (2 + Math.random() * 4) + 's';
+        var starSize = Math.random() < 0.15 ? 2 : 1;
+        star.style.width = starSize + 'px';
+        star.style.height = starSize + 'px';
+        if (Math.random() < 0.2) star.classList.add('star-blue');
+        bg.appendChild(star);
+      }
+
+      var asteroidCount = reducedMotion ? 6 : (window.innerWidth < 720 ? 10 : 16);
+
+      for (var j = 0; j < asteroidCount; j++) {
+        var ast = document.createElement('img');
+        ast.src = 'images/asteroid.png';
+        ast.alt = '';
+        ast.className = 'space-asteroid';
+        ast.draggable = false;
+
+        var size = 14 + Math.random() * 28;
+        var duration = reducedMotion ? 0 : (18 + Math.random() * 22);
+        var edge = Math.floor(Math.random() * 4);
+        var driftX = (Math.random() * 12 - 6).toFixed(1);
+        var driftY = (Math.random() * 8 - 4).toFixed(1);
+        var dx, dy;
+
+        if (edge === 0) {
+          ast.style.left = '-6%';
+          ast.style.top = (Math.random() * 100) + '%';
+          dx = '112vw';
+          dy = driftY + 'vh';
+        } else if (edge === 1) {
+          ast.style.left = '106%';
+          ast.style.top = (Math.random() * 100) + '%';
+          dx = '-112vw';
+          dy = driftY + 'vh';
+        } else if (edge === 2) {
+          ast.style.left = (Math.random() * 100) + '%';
+          ast.style.top = '-8%';
+          dx = driftX + 'vw';
+          dy = '112vh';
+        } else {
+          ast.style.left = (Math.random() * 100) + '%';
+          ast.style.top = '108%';
+          dx = driftX + 'vw';
+          dy = '-112vh';
+        }
+
+        ast.style.width = size + 'px';
+        ast.style.setProperty('--dx', dx);
+        ast.style.setProperty('--dy', dy);
+        ast.style.setProperty('--rot', (Math.random() * 360).toFixed(0) + 'deg');
+        ast.style.setProperty('--opacity', (0.08 + (size / 48) * 0.28).toFixed(2));
+
+        if (reducedMotion) {
+          ast.style.opacity = '0.25';
+        } else {
+          ast.style.setProperty('--dur', duration + 's');
+          ast.style.animationDelay = (-Math.random() * duration) + 's';
+        }
+
+        bg.appendChild(ast);
+      }
+    })();
+
+    // Lightbox
+    (function() {
+      var lb = document.getElementById('lightbox');
+      var lbImg = lb.querySelector('.lightbox-img');
+      var closeBtn = lb.querySelector('.lightbox-close');
+
+      document.querySelectorAll('.shot').forEach(function(img) {
+        img.addEventListener('click', function() {
+          lbImg.src = img.src;
+          lbImg.alt = img.alt;
+          lb.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function close() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+
+      closeBtn.addEventListener('click', close);
+      lb.addEventListener('click', function(e) {
+        if (e.target === lb) close();
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lb.classList.contains('open')) close();
+      });
+    })();
+  </script>
+</body>
+</html>

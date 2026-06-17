@@ -1,12 +1,14 @@
 # Ringborn Ascension — Website
 
-Static marketing site for **Ringborn Ascension** by PixelDo Games. Served via GitHub Pages.
+Static marketing site for **Ringborn Ascension** by PixelDo Games. Served via GitHub Pages at [pixeldogames.com/ringbornascension](https://pixeldogames.com/ringbornascension).
+
+Visitors to [pixeldogames.com](https://pixeldogames.com) are redirected to the game page automatically.
 
 ## Local preview
 
 ```bash
 python3 -m http.server 8000
-# open http://localhost:8000
+# open http://localhost:8000/ringbornascension/
 ```
 
 ## Deploy
@@ -17,9 +19,13 @@ In repo **Settings → Pages**:
 - **Source**: Deploy from a branch
 - **Branch**: `main` — `/` (root)
 
+Site structure:
+- `/` — redirects to `/ringbornascension/`
+- `/ringbornascension/` — game marketing site
+
 ## Custom domain
 
-Settings → Pages, enter the domain. Then in GoDaddy DNS, add:
+`CNAME` points to `pixeldogames.com`. DNS in GoDaddy:
 
 - **A** records for the root pointing to GitHub's IPs:
   - `185.199.108.153`
