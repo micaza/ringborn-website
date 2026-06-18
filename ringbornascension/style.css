@@ -324,6 +324,13 @@ a:hover { text-decoration: underline; }
   border: 1px dashed #2a2a45;
 }
 
+.trailer-placeholder--ready {
+  background-size: cover;
+  background-position: center;
+  border-style: solid;
+  border-color: #3a3a55;
+}
+
 .trailer-play {
   width: 72px;
   height: 72px;
@@ -351,6 +358,11 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
   letter-spacing: 1px;
   margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+}
+
+.trailer-placeholder--ready .trailer-label {
+  color: #f0e6c8;
 }
 
 .trailer-embed iframe {
