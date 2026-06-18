@@ -59,6 +59,7 @@
         tabindex="0"
         data-youtube-en="EAmRV4K4Kjw"
         data-youtube-es=""
+        data-trailer-poster="images/trailer-thumbnail.jpg"
         aria-label="Play official trailer"
       >
         <div class="trailer-play" aria-hidden="true"></div>
@@ -267,11 +268,18 @@
       }
 
       var id = trailerId();
-      if (id) {
+      var poster = (trigger.getAttribute('data-trailer-poster') || '').trim();
+      if (!poster && id) {
+        poster = 'https://img.youtube.com/vi/' + id + '/maxresdefault.jpg';
+      }
+      if (poster) {
         trigger.classList.add('trailer-placeholder--ready');
+        if (trigger.getAttribute('data-trailer-poster')) {
+          trigger.classList.add('trailer-placeholder--poster');
+        }
         trigger.style.backgroundImage =
-          'linear-gradient(rgba(8, 8, 18, 0.45), rgba(8, 8, 18, 0.45)),' +
-          'url(https://img.youtube.com/vi/' + id + '/maxresdefault.jpg)';
+          'linear-gradient(rgba(8, 8, 18, 0.12), rgba(8, 8, 18, 0.12)),' +
+          'url(' + poster + ')';
       }
 
       function playTrailer() {
