@@ -5,10 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PixelDo Games</title>
   <link rel="canonical" href="https://pixeldogames.com/ringbornascension/">
-  <meta http-equiv="refresh" content="0; url=/ringbornascension/">
-  <script>location.replace('/ringbornascension/');</script>
+  <script>
+    if (location.protocol === 'file:') {
+      location.replace('ringbornascension/index.html');
+    } else {
+      location.replace('/ringbornascension/');
+    }
+  </script>
 </head>
 <body>
-  <p><a href="/ringbornascension/">Ringborn Ascension</a></p>
+  <p><a href="ringbornascension/index.html" id="link">Ringborn Ascension</a></p>
+  <script>
+    if (location.protocol !== 'file:') {
+      document.getElementById('link').href = '/ringbornascension/';
+    }
+  </script>
 </body>
 </html>

@@ -9,7 +9,7 @@
   <meta property="og:description" content="Pilot Rebecca. Fight the Spikes. Unlock the fleet. Coming July 16, 2026 on Steam, iOS, and Android.">
   <meta property="og:image" content="https://pixeldogames.com/ringbornascension/images/title.png">
   <meta property="og:url" content="https://pixeldogames.com/ringbornascension/">
-  <link rel="icon" type="image/png" href="images/hero_ship.png">
+  <link rel="icon" type="image/png" href="images/rebecca-portrait-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -51,12 +51,16 @@
   <section class="trailer">
     <div class="container">
       <h2>Trailer</h2>
-      <!-- Swap trailer-placeholder for trailer-embed when ready:
-      <div class="trailer-embed">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ringborn Ascension trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      -->
-      <div class="trailer-placeholder" data-youtube-id="">
+      <!-- Set YouTube IDs below. Spanish browsers get data-youtube-es; everyone else gets data-youtube-en. -->
+      <div
+        class="trailer-placeholder"
+        id="trailer-trigger"
+        role="button"
+        tabindex="0"
+        data-youtube-en=""
+        data-youtube-es=""
+        aria-label="Play trailer"
+      >
         <div class="trailer-play" aria-hidden="true"></div>
         <p class="trailer-label">Trailer coming soon</p>
       </div>
@@ -231,6 +235,49 @@
 
         bg.appendChild(ast);
       }
+    })();
+
+    // Trailer — Spanish browser language → Spanish video, else English
+    (function() {
+      var trigger = document.getElementById('trailer-trigger');
+      if (!trigger) return;
+
+      function isSpanish() {
+        var langs = navigator.languages && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language || 'en'];
+        for (var i = 0; i < langs.length; i++) {
+          if (String(langs[i]).toLowerCase().indexOf('es') === 0) return true;
+        }
+        return false;
+      }
+
+      function trailerId() {
+        var en = (trigger.getAttribute('data-youtube-en') || '').trim();
+        var es = (trigger.getAttribute('data-youtube-es') || '').trim();
+        if (isSpanish() && es) return es;
+        return en || es;
+      }
+
+      function playTrailer() {
+        var id = trailerId();
+        if (!id) return;
+
+        var embed = document.createElement('div');
+        embed.className = 'trailer-embed';
+        var title = isSpanish() ? 'Tráiler de Ringborn Ascension' : 'Ringborn Ascension trailer';
+        embed.innerHTML =
+          '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        trigger.replaceWith(embed);
+      }
+
+      trigger.addEventListener('click', playTrailer);
+      trigger.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          playTrailer();
+        }
+      });
     })();
 
     // Lightbox

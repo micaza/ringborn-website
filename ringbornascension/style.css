@@ -92,7 +92,7 @@ a:hover { text-decoration: underline; }
   bottom: -8%;
   width: min(480px, 52vw);
   height: auto;
-  opacity: 0.38;
+  opacity: 0.95;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   -webkit-mask-image:
@@ -109,7 +109,7 @@ a:hover { text-decoration: underline; }
 .space-asteroid {
   position: fixed;
   height: auto;
-  opacity: var(--opacity, 0.35);
+  opacity: var(--opacity, 0.95);
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   animation: asteroidFly var(--dur, 28s) linear infinite;
@@ -317,6 +317,7 @@ a:hover { text-decoration: underline; }
   align-items: center;
   justify-content: center;
   gap: 20px;
+  cursor: pointer;
   background:
     radial-gradient(ellipse at 50% 50%, rgba(77, 124, 255, 0.12), transparent 70%),
     var(--panel);
