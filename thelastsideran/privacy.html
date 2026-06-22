@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — The Last Sideran</title>
+  <link rel="icon" type="image/png" href="images/rebecca-portrait-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero" style="min-height:auto;padding:60px 24px 40px">
+    <div class="hero-inner">
+      <h1 style="font-family:'Press Start 2P',monospace;color:var(--gold);font-size:clamp(22px,3vw,32px)">Privacy Policy</h1>
+      <p style="color:var(--muted)">Last updated: <span id="date"></span></p>
+    </div>
+  </header>
+
+  <section style="padding-top:20px">
+    <div class="container" style="max-width:760px;color:var(--text);font-size:16px">
+      <p>The Last Sideran ("the Game") is developed by PixelDo Games. This policy explains what information the Game collects and how it is used.</p>
+
+      <h2 style="text-align:left;font-size:18px;margin-top:32px">Information We Collect</h2>
+      <p>The Game does <strong>not</strong> collect, store, or transmit any personal information from players. We do not require an account and we do not track your identity.</p>
+
+      <h2 style="text-align:left;font-size:18px;margin-top:32px">Local Game Data</h2>
+      <p>The Game saves your high score and audio preferences locally on your device only. This data is not shared with us or any third party.</p>
+
+      <h2 style="text-align:left;font-size:18px;margin-top:32px">In-App Purchases</h2>
+      <p>The Game offers an optional premium upgrade. Purchases are processed entirely by Apple (App Store) or Google (Google Play). We do not receive your payment details. Their respective privacy policies apply to those transactions.</p>
+
+      <h2 style="text-align:left;font-size:18px;margin-top:32px">Third-Party Services</h2>
+      <p>The Game does not include third-party analytics, advertising, or tracking SDKs.</p>
+
+      <h2 style="text-align:left;font-size:18px;margin-top:32px">Children's Privacy</h2>
+      <p>The Game is suitable for all ages and does not knowingly collect any data from children or any other user.</p>
+
+      <h2 style="text-align:left;font-size:18px;margin-top:32px">Changes</h2>
+      <p>If this policy changes, the updated version will be posted on this page.</p>
+
+      <h2 style="text-align:left;font-size:18px;margin-top:32px">Contact</h2>
+      <p>Questions? Email <a href="mailto:support@pixeldoggames.com">support@pixeldoggames.com</a> <em style="color:var(--muted);font-style:normal"></em></p>
+
+      <p style="margin-top:48px"><a href="index.html">← Back to game</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="copy">© <span id="year"></span> PixelDo Games. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('date').textContent = new Date().toISOString().slice(0,10);
+  </script>
+</body>
+</html>

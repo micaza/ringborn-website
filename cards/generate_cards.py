@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Ringborn Ascension business card front and back (3.5" x 2" @ 300 DPI)."""
+"""Generate The Last Sideran business card front and back (3.5" x 2" @ 300 DPI)."""
 
 from pathlib import Path
 
@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parent
 PIXEL_FONT = ROOT / "PressStart2P-Regular.ttf"
 W, H = 1050, 600  # 3.5" x 2" at 300 DPI
-URL = "https://pixeldogames.com/ringbornascension"
+URL = "https://pixeldogames.com/thelastsideran"
 GOLD = (255, 210, 58)
 GOLD_BRIGHT = (255, 220, 40)
 GOLD_DARK = (240, 160, 20)
@@ -160,7 +160,7 @@ def make_back() -> Image.Image:
     card = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     draw = ImageDraw.Draw(card)
 
-    logo = Image.open(ROOT.parent / "ringbornascension" / "images" / "title.png").convert("RGBA")
+    logo = Image.open(ROOT.parent / "thelastsideran" / "images" / "title.png").convert("RGBA")
     logo_w = 520
     logo_h = int(logo.height * (logo_w / logo.width))
     logo = logo.resize((logo_w, logo_h), Image.Resampling.LANCZOS)
@@ -168,7 +168,7 @@ def make_back() -> Image.Image:
 
     font_url = load_font(26, bold=True)
     font_scan = load_font(22)
-    url_text = "pixeldogames.com/ringbornascension"
+    url_text = "pixeldogames.com/thelastsideran"
     url_y = 36 + logo_h + 10
     url_w = text_width(draw, url_text, font_url)
     url_x = (W - url_w) // 2

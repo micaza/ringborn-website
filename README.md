@@ -1,6 +1,6 @@
-# Ringborn Ascension — Website
+# The Last Sideran — Website
 
-Static marketing site for **Ringborn Ascension** by PixelDo Games. Served via GitHub Pages at [pixeldogames.com/ringbornascension](https://pixeldogames.com/ringbornascension).
+Static marketing site for **The Last Sideran** by PixelDo Games. Served via GitHub Pages at [pixeldogames.com/thelastsideran](https://pixeldogames.com/thelastsideran).
 
 Visitors to [pixeldogames.com](https://pixeldogames.com) are redirected to the game page automatically.
 
@@ -8,7 +8,7 @@ Visitors to [pixeldogames.com](https://pixeldogames.com) are redirected to the g
 
 ```bash
 python3 -m http.server 8000
-# open http://localhost:8000/ringbornascension/
+# open http://localhost:8000/thelastsideran/
 ```
 
 ## Deploy
@@ -20,8 +20,9 @@ In repo **Settings → Pages**:
 - **Branch**: `main` — `/` (root)
 
 Site structure:
-- `/` — redirects to `/ringbornascension/`
-- `/ringbornascension/` — game marketing site
+- `/` — redirects to `/thelastsideran/`
+- `/ringbornascension/` — redirects to `/thelastsideran/` (legacy path)
+- `/thelastsideran/` — game marketing site
 
 ## Custom domain
 
