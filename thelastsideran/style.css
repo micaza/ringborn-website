@@ -378,6 +378,10 @@ a:hover { text-decoration: underline; }
   color: #f0e6c8;
 }
 
+.gameplay-video + .gameplay-video {
+  margin-top: 40px;
+}
+
 .trailer-embed iframe {
   position: absolute;
   inset: 0;
