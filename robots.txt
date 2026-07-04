@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /cards/
+
+Sitemap: https://pixeldogames.com/sitemap.xml
