@@ -382,6 +382,15 @@ a:hover { text-decoration: underline; }
   margin-top: 40px;
 }
 
+.gameplay-trigger--retro.trailer-placeholder--ready {
+  border-color: #1a5c28;
+  box-shadow: 0 0 24px rgba(26, 140, 52, 0.18);
+}
+
+.gameplay-trigger--retro .trailer-label {
+  color: #7ee08a;
+}
+
 .trailer-embed iframe {
   position: absolute;
   inset: 0;
