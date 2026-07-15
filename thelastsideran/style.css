@@ -154,6 +154,13 @@ a:hover { text-decoration: underline; }
   margin: 0 0 36px;
 }
 
+.hero-wishlist-note {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+
 .hero-ship-deco {
   position: absolute;
   left: 20px;
@@ -292,6 +299,130 @@ a:hover { text-decoration: underline; }
 
 .badge.steam .badge-name {
   letter-spacing: 0.5px;
+}
+
+.badge.steam.wishlist {
+  opacity: 1;
+  cursor: pointer;
+  border-style: solid;
+  border-color: #66c0f4;
+  box-shadow: 0 0 0 1px rgba(102, 192, 244, 0.15), 0 8px 28px rgba(102, 192, 244, 0.12);
+}
+
+.badge.steam.wishlist:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px rgba(255, 210, 58, 0.2), 0 10px 32px rgba(255, 210, 58, 0.15);
+  transform: translateY(-2px);
+}
+
+.badge.steam.wishlist:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ===== Wishlist CTA ===== */
+.wishlist-cta {
+  position: relative;
+  z-index: 1;
+  padding: 72px 0;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(102, 192, 244, 0.1), transparent 55%),
+    radial-gradient(ellipse at 50% 100%, rgba(255, 210, 58, 0.06), transparent 50%),
+    rgba(12, 12, 24, 0.96);
+  border-top: 1px solid #2a2a45;
+  border-bottom: 1px solid #2a2a45;
+}
+
+.wishlist-cta h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(16px, 2.2vw, 22px);
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin: 0 0 20px;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.wishlist-lead {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  font-size: clamp(16px, 1.8vw, 18px);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.wishlist-points {
+  list-style: none;
+  max-width: 560px;
+  margin: 0 auto 36px;
+  padding: 0;
+  text-align: left;
+}
+
+.wishlist-points li {
+  position: relative;
+  padding: 12px 0 12px 28px;
+  color: var(--muted);
+  border-bottom: 1px solid rgba(42, 42, 69, 0.7);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.wishlist-points li:last-child {
+  border-bottom: none;
+}
+
+.wishlist-points li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-size: 10px;
+  color: var(--gold);
+}
+
+.wishlist-points strong {
+  color: var(--text);
+}
+
+.wishlist-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(180deg, #66c0f4 0%, #1a9fff 100%);
+  color: #0b1a28;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 0 #0e4a7a, 0 12px 32px rgba(26, 159, 255, 0.35);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.wishlist-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  text-decoration: none;
+  color: #0b1a28;
+  box-shadow: 0 6px 0 #0e4a7a, 0 16px 40px rgba(26, 159, 255, 0.45);
+}
+
+.wishlist-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 #0e4a7a, 0 8px 20px rgba(26, 159, 255, 0.3);
+}
+
+.wishlist-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.wishlist-sub {
+  margin: 20px 0 0;
+  font-size: 14px;
+  color: var(--muted);
 }
 
 /* ===== Trailer ===== */
