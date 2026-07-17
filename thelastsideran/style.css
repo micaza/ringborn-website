@@ -431,6 +431,21 @@ a:hover { text-decoration: underline; }
   background: rgba(12, 12, 24, 0.92);
 }
 
+.story-blurb {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 640px;
+  margin: -8px auto 28px;
+  text-align: center;
+  line-height: 1.55;
+}
+
+.story-blurb em {
+  color: var(--text);
+  font-style: normal;
+  font-weight: 600;
+}
+
 .trailer-placeholder,
 .trailer-embed {
   position: relative;
