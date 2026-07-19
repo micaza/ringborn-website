@@ -21,7 +21,6 @@ In repo **Settings → Pages**:
 
 Site structure:
 - `/` — redirects to `/thelastsideran/`
-- `/ringbornascension/` — redirects to `/thelastsideran/` (legacy path)
 - `/thelastsideran/` — game marketing site
 
 ## Custom domain
