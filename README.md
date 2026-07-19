@@ -22,6 +22,7 @@ In repo **Settings → Pages**:
 Site structure:
 - `/` — redirects to `/thelastsideran/`
 - `/thelastsideran/` — game marketing site
+- `404.html` — missing paths send visitors home (still HTTP 404 for Google)
 
 ## Custom domain
 
