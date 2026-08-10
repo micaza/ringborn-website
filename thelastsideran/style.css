@@ -301,7 +301,7 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.5px;
 }
 
-.badge.steam.wishlist {
+.badge.steam.available {
   opacity: 1;
   cursor: pointer;
   border-style: solid;
@@ -309,13 +309,35 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 0 0 1px rgba(102, 192, 244, 0.15), 0 8px 28px rgba(102, 192, 244, 0.12);
 }
 
-.badge.steam.wishlist:hover {
+.badge.steam.available:hover {
   border-color: var(--gold);
   box-shadow: 0 0 0 1px rgba(255, 210, 58, 0.2), 0 10px 32px rgba(255, 210, 58, 0.15);
   transform: translateY(-2px);
 }
 
-.badge.steam.wishlist:focus-visible {
+.badge.steam.available:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.badge.itch {
+  background: linear-gradient(135deg, #2a1a1f 0%, #1a1216 100%);
+  border-color: #fa5c5c;
+  box-shadow: 0 0 0 1px rgba(250, 92, 92, 0.15), 0 8px 28px rgba(250, 92, 92, 0.12);
+}
+
+.badge.itch .badge-name {
+  letter-spacing: 0.5px;
+  color: #fa5c5c;
+}
+
+.badge.itch.demo:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px rgba(255, 210, 58, 0.2), 0 10px 32px rgba(255, 210, 58, 0.15);
+  transform: translateY(-2px);
+}
+
+.badge.itch.demo:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
@@ -383,6 +405,48 @@ a:hover { text-decoration: underline; }
 
 .wishlist-points strong {
   color: var(--text);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(180deg, #ff7a7a 0%, #fa5c5c 100%);
+  color: #1a0a0a;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 0 #8b2e2e, 0 12px 32px rgba(250, 92, 92, 0.35);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.demo-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  text-decoration: none;
+  color: #1a0a0a;
+  box-shadow: 0 6px 0 #8b2e2e, 0 16px 40px rgba(250, 92, 92, 0.45);
+}
+
+.demo-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 #8b2e2e, 0 8px 20px rgba(250, 92, 92, 0.3);
+}
+
+.demo-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .wishlist-btn {
