@@ -20,15 +20,16 @@
   <div class="space-bg" id="space-bg" aria-hidden="true"></div>
 
   <header class="hero">
-    <div class="space-scene" aria-hidden="true">
-      <div class="space-nebula"></div>
-      <img src="images/rebecca-portrait.png" alt="Illustration of pilot Zenia in white futuristic armor and helmet, gripping twin control devices" class="space-rebecca">
-    </div>
-
     <div class="hero-inner">
       <img src="images/title.png" alt="The Last Sideran title logo in brushed gold metallic lettering" class="title-img">
-      <p class="tagline">Fight the Spikes. Unlock ships &amp; story. Survive.</p>
-      <p class="launch-date">Available now on Steam · Free demo on itch.io · iOS &amp; Android coming soon</p>
+      <p class="tagline">Fight the Spikes.<br> Unlock ships &amp; story. Survive.</p>
+      <p class="launch-date">
+        <span>Available now on Steam</span>
+        <span class="launch-sep"> · </span>
+        <span>Free demo on itch.io</span>
+        <span class="launch-sep"> · </span>
+        <span>iOS &amp; Android coming soon</span>
+      </p>
 
       <div class="store-badges">
         <a
@@ -64,8 +65,6 @@
         Full game available now on Steam. Try the free demo on itch.io. iOS and Android coming soon.
       </p>
     </div>
-    <img src="images/spike.png" alt="" class="hero-spike" aria-hidden="true">
-    <img src="images/hero_ship.png" alt="" class="hero-ship-deco" aria-hidden="true">
   </header>
 
   <section class="trailer">
@@ -79,7 +78,6 @@
         tabindex="0"
         data-youtube-en="1z8RJNkF4Xs"
         data-youtube-es=""
-        data-trailer-poster="images/trailer-thumbnail.jpg"
         aria-label="Play official trailer"
       >
         <div class="trailer-play" aria-hidden="true"></div>
@@ -101,7 +99,6 @@
           tabindex="0"
           data-youtube="TVc5yvpf_mw"
           data-title="The Last Sideran — Speak Sideran"
-          data-trailer-poster="images/speak-sideran-thumbnail.jpg"
           aria-label="Play Speak Sideran intro video"
         >
           <div class="trailer-play" aria-hidden="true"></div>
@@ -162,7 +159,7 @@
 
   <footer>
     <div class="container footer-inner">
-      <img src="images/studio.png" alt="PixelDo Games studio logo in yellow and red block lettering" class="studio-logo">
+      <p class="studio-name">PixelDo Games</p>
       <div class="footer-links">
         <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer">Play Free Demo</a>
         <span class="sep">·</span>
@@ -179,12 +176,10 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Space background: stars + flying asteroids
+    // Space background: stars
     (function() {
       var bg = document.getElementById('space-bg');
       if (!bg) return;
-
-      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       for (var i = 0; i < 120; i++) {
         var star = document.createElement('span');
@@ -198,60 +193,6 @@
         star.style.height = starSize + 'px';
         if (Math.random() < 0.2) star.classList.add('star-blue');
         bg.appendChild(star);
-      }
-
-      var asteroidCount = reducedMotion ? 6 : (window.innerWidth < 720 ? 10 : 16);
-
-      for (var j = 0; j < asteroidCount; j++) {
-        var ast = document.createElement('img');
-        ast.src = 'images/asteroid.png';
-        ast.alt = '';
-        ast.className = 'space-asteroid';
-        ast.draggable = false;
-
-        var size = 14 + Math.random() * 28;
-        var duration = reducedMotion ? 0 : (18 + Math.random() * 22);
-        var edge = Math.floor(Math.random() * 4);
-        var driftX = (Math.random() * 12 - 6).toFixed(1);
-        var driftY = (Math.random() * 8 - 4).toFixed(1);
-        var dx, dy;
-
-        if (edge === 0) {
-          ast.style.left = '-6%';
-          ast.style.top = (Math.random() * 100) + '%';
-          dx = '112vw';
-          dy = driftY + 'vh';
-        } else if (edge === 1) {
-          ast.style.left = '106%';
-          ast.style.top = (Math.random() * 100) + '%';
-          dx = '-112vw';
-          dy = driftY + 'vh';
-        } else if (edge === 2) {
-          ast.style.left = (Math.random() * 100) + '%';
-          ast.style.top = '-8%';
-          dx = driftX + 'vw';
-          dy = '112vh';
-        } else {
-          ast.style.left = (Math.random() * 100) + '%';
-          ast.style.top = '108%';
-          dx = driftX + 'vw';
-          dy = '-112vh';
-        }
-
-        ast.style.width = size + 'px';
-        ast.style.setProperty('--dx', dx);
-        ast.style.setProperty('--dy', dy);
-        ast.style.setProperty('--rot', (Math.random() * 360).toFixed(0) + 'deg');
-        ast.style.setProperty('--opacity', (0.08 + (size / 48) * 0.28).toFixed(2));
-
-        if (reducedMotion) {
-          ast.style.opacity = '0.25';
-        } else {
-          ast.style.setProperty('--dur', duration + 's');
-          ast.style.animationDelay = (-Math.random() * duration) + 's';
-        }
-
-        bg.appendChild(ast);
       }
     })();
 
