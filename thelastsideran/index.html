@@ -78,32 +78,11 @@
         tabindex="0"
         data-youtube-en="1z8RJNkF4Xs"
         data-youtube-es=""
+        data-trailer-poster="images/trailer-thumbnail.jpg"
         aria-label="Play official trailer"
       >
         <div class="trailer-play" aria-hidden="true"></div>
         <p class="trailer-label">Watch official trailer</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="trailer story">
-    <div class="container">
-      <h2>Speak Sideran</h2>
-      <p class="story-blurb">
-        In <em>The Last Sideran</em>, the Sideran people have their own language — hear it in this intro.
-      </p>
-      <div class="gameplay-video">
-        <div
-          class="trailer-placeholder gameplay-trigger"
-          role="button"
-          tabindex="0"
-          data-youtube="TVc5yvpf_mw"
-          data-title="The Last Sideran — Speak Sideran"
-          aria-label="Play Speak Sideran intro video"
-        >
-          <div class="trailer-play" aria-hidden="true"></div>
-          <p class="trailer-label">Watch Speak Sideran</p>
-        </div>
       </div>
     </div>
   </section>
@@ -251,57 +230,6 @@
           e.preventDefault();
           playTrailer();
         }
-      });
-    })();
-
-    // Gameplay videos — click-to-load YouTube embeds
-    (function() {
-      document.querySelectorAll('.gameplay-trigger').forEach(function(trigger) {
-        var id = (trigger.getAttribute('data-youtube') || '').trim();
-        if (!id) return;
-        var title = trigger.getAttribute('data-title') || 'The Last Sideran gameplay';
-
-        // Custom local poster (e.g. Speak Sideran art with title baked in)
-        var customPoster = (trigger.getAttribute('data-trailer-poster') || '').trim();
-        if (customPoster) {
-          trigger.classList.add('trailer-placeholder--ready', 'trailer-placeholder--poster');
-          trigger.style.backgroundImage =
-            'linear-gradient(rgba(8, 8, 18, 0.12), rgba(8, 8, 18, 0.12)),' +
-            'url(' + customPoster + ')';
-        } else {
-          // Poster: try HD thumbnail, fall back to SD; keep plain placeholder if neither loads
-          (function setPoster(qualities) {
-            if (!qualities.length) return;
-            var url = 'https://img.youtube.com/vi/' + id + '/' + qualities[0] + '.jpg';
-            var probe = new Image();
-            probe.onload = function() {
-              // YouTube serves a 120x90 stub instead of 404 for some missing thumbnails
-              if (probe.naturalWidth <= 120) return setPoster(qualities.slice(1));
-              trigger.classList.add('trailer-placeholder--ready');
-              trigger.style.backgroundImage =
-                'linear-gradient(rgba(8, 8, 18, 0.12), rgba(8, 8, 18, 0.12)),' +
-                'url(' + url + ')';
-            };
-            probe.onerror = function() { setPoster(qualities.slice(1)); };
-            probe.src = url;
-          })(['maxresdefault', 'hqdefault']);
-        }
-
-        function playGameplay() {
-          var embed = document.createElement('div');
-          embed.className = 'trailer-embed';
-          embed.innerHTML =
-            '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-          trigger.replaceWith(embed);
-        }
-
-        trigger.addEventListener('click', playGameplay);
-        trigger.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            playGameplay();
-          }
-        });
       });
     })();
   </script>
