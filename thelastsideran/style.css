@@ -19,6 +19,8 @@ html, body {
   color: var(--text);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -61,7 +63,8 @@ a:hover { text-decoration: underline; }
   z-index: 1;
   min-height: 92vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: center;
   text-align: center;
   background: linear-gradient(180deg, transparent 0%, rgba(12, 12, 24, 0.85) 100%);
@@ -72,20 +75,66 @@ a:hover { text-decoration: underline; }
 .hero-inner {
   position: relative;
   z-index: 2;
-  width: 100%;
+  box-sizing: border-box;
+  width: auto;
   max-width: 800px;
   min-width: 0;
+  align-self: stretch;
+  margin: 0 auto;
 }
 
 .title-img {
   display: block;
-  max-width: 100%;
   width: min(720px, 100%);
+  max-width: calc(100vw - 48px);
   height: auto;
   margin: 0 auto;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-  filter: drop-shadow(0 8px 0 rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.7));
+}
+
+/* Hide the English default until JS swaps src for Japanese browsers. */
+html[lang="ja"] .title-img[src$="title.png"] {
+  visibility: hidden;
+}
+
+html[lang="ja"]:not(.i18n-ready) body {
+  visibility: hidden;
+}
+
+html[lang="ja"] {
+  font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html[lang="ja"] .tagline,
+html[lang="ja"] section h2,
+html[lang="ja"] .wishlist-cta h2,
+html[lang="ja"] .warning-card h3,
+html[lang="ja"] .trailer-label,
+html[lang="ja"] .studio-name {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+html[lang="ja"] .tagline {
+  font-size: clamp(16px, 2.2vw, 22px);
+  line-height: 1.7;
+}
+
+html[lang="ja"] .warning-card h3 {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+html[lang="ja"] .badge-prefix {
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
+html[lang="ja"] .hero-inner h1 {
+  font-family: 'Noto Sans JP', 'Inter', sans-serif !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .tagline {
@@ -585,13 +634,22 @@ footer {
 
   .hero-inner { max-width: 100%; }
 
-  .title-img { width: 100%; }
+  .title-img { max-width: calc(100vw - 32px); }
 
   .tagline {
     font-size: clamp(9px, 2.6vw, 11px);
     letter-spacing: 0.4px;
     line-height: 1.9;
     margin: 16px 0 14px;
+  }
+
+  html[lang="ja"] .tagline {
+    font-size: clamp(14px, 4vw, 18px);
+    letter-spacing: 0.06em;
+  }
+
+  html[lang="ja"] .warning-card h3 {
+    font-size: 14px;
   }
 
   .launch-date {

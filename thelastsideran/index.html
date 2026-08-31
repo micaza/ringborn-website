@@ -15,20 +15,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="i18n.js"></script>
+  <noscript><style>html[lang="ja"] body { visibility: visible !important; }</style></noscript>
 </head>
 <body>
   <div class="space-bg" id="space-bg" aria-hidden="true"></div>
 
   <header class="hero">
     <div class="hero-inner">
-      <img src="images/title.png" alt="The Last Sideran title logo in brushed gold metallic lettering" class="title-img">
-      <p class="tagline">Fight the Spikes.<br> Unlock ships &amp; story. Survive.</p>
+      <img
+        src="images/title.png"
+        data-src-en="images/title.png"
+        data-src-ja="images/title-ja.png"
+        data-alt-en="The Last Sideran"
+        data-alt-ja="ザ・ラスト・サイデラン"
+        alt="The Last Sideran"
+        class="title-img"
+        id="title-logo"
+      >
+      <p class="tagline" data-i18n-html="taglineHtml">Fight the Spikes.<br> Unlock ships &amp; story. Survive.</p>
       <p class="launch-date">
-        <span>Available now on Steam</span>
+        <span data-i18n="launchSteam">Available now on Steam</span>
         <span class="launch-sep"> · </span>
-        <span>Free demo on itch.io</span>
+        <span data-i18n="launchItch">Free demo on itch.io</span>
         <span class="launch-sep"> · </span>
-        <span>iOS &amp; Android coming soon</span>
+        <span data-i18n="launchMobile">iOS &amp; Android coming soon</span>
       </p>
 
       <div class="store-badges">
@@ -38,8 +49,9 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Play free demo of The Last Sideran on itch.io"
+          data-i18n-aria="badgeItchAria"
         >
-          <span class="badge-prefix">Play free demo on</span>
+          <span class="badge-prefix" data-i18n="badgeItchPrefix">Play free demo on</span>
           <span class="badge-name">itch.io</span>
         </a>
         <a
@@ -48,20 +60,21 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Get The Last Sideran on Steam"
+          data-i18n-aria="badgeSteamAria"
         >
-          <span class="badge-prefix">Get it on</span>
+          <span class="badge-prefix" data-i18n="badgeSteamPrefix">Get it on</span>
           <span class="badge-name">Steam</span>
         </a>
-        <span class="badge ios coming-soon" aria-label="App Store — coming soon">
-          <span class="badge-prefix">Download on the</span>
+        <span class="badge ios coming-soon" aria-label="App Store — coming soon" data-i18n-aria="badgeIosAria">
+          <span class="badge-prefix" data-i18n="badgeIosPrefix">Download on the</span>
           <span class="badge-name">App Store</span>
         </span>
-        <span class="badge android coming-soon" aria-label="Google Play — coming soon">
-          <span class="badge-prefix">Get it on</span>
+        <span class="badge android coming-soon" aria-label="Google Play — coming soon" data-i18n-aria="badgeAndroidAria">
+          <span class="badge-prefix" data-i18n="badgeAndroidPrefix">Get it on</span>
           <span class="badge-name">Google Play</span>
         </span>
       </div>
-      <p class="hero-wishlist-note">
+      <p class="hero-wishlist-note" data-i18n="heroNote">
         Full game available now on Steam. Try the free demo on itch.io. iOS and Android coming soon.
       </p>
     </div>
@@ -69,28 +82,29 @@
 
   <section class="trailer">
     <div class="container">
-      <h2>Trailer</h2>
+      <h2 data-i18n="trailerHeading">Trailer</h2>
       <!-- Set YouTube IDs below. Spanish browsers get data-youtube-es; everyone else gets data-youtube-en. -->
       <div
         class="trailer-placeholder"
         id="trailer-trigger"
         role="button"
         tabindex="0"
-        data-youtube-en="1z8RJNkF4Xs"
+        data-youtube-en="uMPa0X-6mTA"
         data-youtube-es=""
         data-trailer-poster="images/trailer-thumbnail.jpg"
         aria-label="Play official trailer"
+        data-i18n-aria="trailerAria"
       >
         <div class="trailer-play" aria-hidden="true"></div>
-        <p class="trailer-label">Watch official trailer</p>
+        <p class="trailer-label" data-i18n="trailerLabel">Watch official trailer</p>
       </div>
     </div>
   </section>
 
   <section class="wishlist-cta" id="wishlist">
     <div class="container">
-      <h2>Play The Last Sideran</h2>
-      <p class="wishlist-lead">
+      <h2 data-i18n="ctaHeading">Play The Last Sideran</h2>
+      <p class="wishlist-lead" data-i18n="ctaLead">
         Full game on Steam. Free demo on itch.io. iOS and Android coming soon.
       </p>
       <div class="cta-buttons">
@@ -100,7 +114,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Play Free Demo on itch.io
+          <span data-i18n="ctaDemo">Play Free Demo on itch.io</span>
         </a>
         <a
           class="wishlist-btn"
@@ -108,7 +122,7 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          Get it on Steam
+          <span data-i18n="ctaSteam">Get it on Steam</span>
         </a>
       </div>
     </div>
@@ -119,18 +133,18 @@
       <div class="warning-grid">
         <div class="warning-card">
           <div class="warning-icon">⚠️</div>
-          <h3>Photosensitivity Warning</h3>
-          <p>This game contains flashing lights and rapidly changing colors that may cause discomfort or seizures in people with photosensitive epilepsy. If you or anyone in your household has a history of epilepsy or seizures, consult a doctor before playing.</p>
+          <h3 data-i18n="warnPhotoTitle">Photosensitivity Warning</h3>
+          <p data-i18n="warnPhotoBody">This game contains flashing lights and rapidly changing colors that may cause discomfort or seizures in people with photosensitive epilepsy. If you or anyone in your household has a history of epilepsy or seizures, consult a doctor before playing.</p>
         </div>
         <div class="warning-card">
           <div class="warning-icon">🔊</div>
-          <h3>Volume Warning</h3>
-          <p>This game contains loud sound effects and music. Please lower your volume before putting on headphones.</p>
+          <h3 data-i18n="warnVolumeTitle">Volume Warning</h3>
+          <p data-i18n="warnVolumeBody">This game contains loud sound effects and music. Please lower your volume before putting on headphones.</p>
         </div>
         <div class="warning-card">
           <div class="warning-icon">🌐</div>
-          <h3>Platform Availability</h3>
-          <p>The full game is <a href="https://store.steampowered.com/app/4857470/The_Last_Sideran/" target="_blank" rel="noopener noreferrer">available now on Steam</a> (paid). A free demo is on <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer">itch.io</a>. iOS and Android are coming soon — free with the standard ship and 3 lives per run. Additional ships unlock through gameplay; the optional premium upgrade includes extra lives.</p>
+          <h3 data-i18n="warnPlatformTitle">Platform Availability</h3>
+          <p data-i18n-html="warnPlatformHtml">The full game is <a href="https://store.steampowered.com/app/4857470/The_Last_Sideran/" target="_blank" rel="noopener noreferrer">available now on Steam</a> (paid). A free demo is on <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer">itch.io</a>. iOS and Android are coming soon — free with the standard ship and 3 lives per run. Additional ships unlock through gameplay; the optional premium upgrade includes extra lives.</p>
         </div>
       </div>
     </div>
@@ -140,15 +154,15 @@
     <div class="container footer-inner">
       <p class="studio-name">PixelDo Games</p>
       <div class="footer-links">
-        <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer">Play Free Demo</a>
+        <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer" data-i18n="footerDemo">Play Free Demo</a>
         <span class="sep">·</span>
-        <a href="https://store.steampowered.com/app/4857470/The_Last_Sideran/" target="_blank" rel="noopener noreferrer">Get it on Steam</a>
+        <a href="https://store.steampowered.com/app/4857470/The_Last_Sideran/" target="_blank" rel="noopener noreferrer" data-i18n="footerSteam">Get it on Steam</a>
         <span class="sep">·</span>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
         <span class="sep">·</span>
-        <a href="support.html">Support</a>
+        <a href="support.html" data-i18n="footerSupport">Support</a>
       </div>
-      <p class="copy">© <span id="year"></span> PixelDo Games. All rights reserved.</p>
+      <p class="copy">© <span id="year"></span> <span data-i18n="footerRights">PixelDo Games. All rights reserved.</span></p>
     </div>
   </footer>
 
@@ -181,13 +195,7 @@
       if (!trigger) return;
 
       function isSpanish() {
-        var langs = navigator.languages && navigator.languages.length
-          ? navigator.languages
-          : [navigator.language || 'en'];
-        for (var i = 0; i < langs.length; i++) {
-          if (String(langs[i]).toLowerCase().indexOf('es') === 0) return true;
-        }
-        return false;
+        return window.__tlsLang === 'es';
       }
 
       function trailerId() {
@@ -218,7 +226,9 @@
 
         var embed = document.createElement('div');
         embed.className = 'trailer-embed';
-        var title = isSpanish() ? 'Tráiler de The Last Sideran' : 'The Last Sideran trailer';
+        var title = window.__tlsT
+          ? window.__tlsT('trailerIframeTitle', isSpanish() ? 'Tráiler de The Last Sideran' : 'The Last Sideran trailer')
+          : (isSpanish() ? 'Tráiler de The Last Sideran' : 'The Last Sideran trailer');
         embed.innerHTML =
           '<iframe src="https://www.youtube.com/embed/' + id + '?autoplay=1" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
         trigger.replaceWith(embed);

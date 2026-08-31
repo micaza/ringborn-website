@@ -8,45 +8,47 @@
   <link rel="icon" type="image/png" href="images/rebecca-portrait-icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="i18n.js"></script>
+  <noscript><style>html[lang="ja"] body { visibility: visible !important; }</style></noscript>
 </head>
 <body>
   <header class="hero" style="min-height:auto;padding:60px 24px 40px">
     <div class="hero-inner">
-      <h1 style="font-family:'Press Start 2P',monospace;color:var(--gold);font-size:clamp(22px,3vw,32px)">Support</h1>
-      <p style="color:var(--muted)">Need help with The Last Sideran?</p>
+      <h1 style="font-family:'Press Start 2P',monospace;color:var(--gold);font-size:clamp(22px,3vw,32px)" data-i18n="supportHeading">Support</h1>
+      <p style="color:var(--muted)" data-i18n="supportLead">Need help with The Last Sideran?</p>
     </div>
   </header>
 
   <section style="padding-top:20px">
     <div class="container" style="max-width:760px;color:var(--text);font-size:16px">
-      <h2 style="text-align:left;font-size:18px">Contact Us</h2>
-      <p>For bug reports, feature requests, or purchase issues, email:</p>
+      <h2 style="text-align:left;font-size:18px" data-i18n="supportContactTitle">Contact Us</h2>
+      <p data-i18n="supportContactLead">For bug reports, feature requests, or purchase issues, email:</p>
       <p><a href="mailto:support@pixeldoggames.com">support@pixeldoggames.com</a></p>
 
-      <h2 style="text-align:left;font-size:18px;margin-top:32px">Common Questions</h2>
+      <h2 style="text-align:left;font-size:18px;margin-top:32px" data-i18n="supportFaqTitle">Common Questions</h2>
 
-      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px">How do I unlock new ships?</h3>
-      <p>Collect star essence during gameplay. As you gather enough star essence, new ships become available — each with its own weapon to help you push further.</p>
+      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px" data-i18n="supportQShips">How do I unlock new ships?</h3>
+      <p data-i18n="supportAShips">Collect star essence during gameplay. As you gather enough star essence, new ships become available — each with its own weapon to help you push further.</p>
 
-      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px">What do the colored gems do?</h3>
-      <p>Each color is a different power-up: blue laser, fast laser, ball laser, shield, or armor.</p>
+      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px" data-i18n="supportQGems">What do the colored gems do?</h3>
+      <p data-i18n="supportAGems">Each color is a different power-up: blue laser, fast laser, ball laser, shield, or armor.</p>
 
-      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px">Does the game support controllers?</h3>
-      <p>Yes. The Last Sideran supports controllers on both mobile and desktop, including Steam.</p>
+      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px" data-i18n="supportQController">Does the game support controllers?</h3>
+      <p data-i18n="supportAController">Yes. The Last Sideran supports controllers on both mobile and desktop, including Steam.</p>
 
-      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px">Where can I play the demo?</h3>
-      <p>A free demo is available on itch.io: <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer">pixeldogames.itch.io/the-last-sideran</a>.</p>
+      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px" data-i18n="supportQDemo">Where can I play the demo?</h3>
+      <p data-i18n-html="supportADemoHtml">A free demo is available on itch.io: <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer">pixeldogames.itch.io/the-last-sideran</a>.</p>
 
-      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px">Where can I buy the game?</h3>
-      <p>The Last Sideran is available now on Steam: <a href="https://store.steampowered.com/app/4857470/The_Last_Sideran/" target="_blank" rel="noopener noreferrer">store.steampowered.com</a>. A free demo is on <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer">itch.io</a>. iOS and Android are coming soon.</p>
+      <h3 style="color:var(--gold);font-family:'Inter',sans-serif;font-size:16px;margin-top:24px" data-i18n="supportQBuy">Where can I buy the game?</h3>
+      <p data-i18n-html="supportABuyHtml">The Last Sideran is available now on Steam: <a href="https://store.steampowered.com/app/4857470/The_Last_Sideran/" target="_blank" rel="noopener noreferrer">store.steampowered.com</a>. A free demo is on <a href="https://pixeldogames.itch.io/the-last-sideran" target="_blank" rel="noopener noreferrer">itch.io</a>. iOS and Android are coming soon.</p>
 
-      <p style="margin-top:48px"><a href="index.html">← Back to game</a></p>
+      <p style="margin-top:48px"><a href="index.html" data-i18n="backToGame">← Back to game</a></p>
     </div>
   </section>
 
   <footer>
     <div class="container footer-inner">
-      <p class="copy">© <span id="year"></span> PixelDo Games. All rights reserved.</p>
+      <p class="copy">© <span id="year"></span> <span data-i18n="footerRights">PixelDo Games. All rights reserved.</span></p>
     </div>
   </footer>
 
